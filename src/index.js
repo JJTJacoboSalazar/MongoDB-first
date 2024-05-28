@@ -4,6 +4,10 @@ const mongoose = require('mongoose');
 const { MONGODB_URI } = process.env;
 const app = express();
 const port = 3000;
+const userRouter = require('./routes/user');
+
+// Middleware
+app.use('/api', userRouter );
 
 // Routes
 app.get('/', (req, res) => {
