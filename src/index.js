@@ -7,6 +7,7 @@ const port = 3000;
 const userRouter = require('./routes/user');
 
 // Middleware
+app.use(express.json());
 app.use('/api', userRouter );
 
 // Routes
